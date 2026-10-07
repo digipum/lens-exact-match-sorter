@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lens Exact Match Sorter</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { width: 320px; margin: 0; padding: 18px; font: 13px/1.5 system-ui, sans-serif; color: #edf2f7; background: #17212b; }
+    h1 { font-size: 18px; line-height: 1.25; margin: 0 0 12px; }
+    p { color: #c9d6e0; }
+    button { display: block; width: 100%; margin: 8px 0; padding: 10px; border: 1px solid #617889; border-radius: 7px; background: #283847; color: #edf2f7; font: inherit; cursor: pointer; }
+    button[aria-pressed="true"] { background: #95d5c0; color: #112b28; }
+    button:disabled { opacity: .5; cursor: default; }
+    button:focus-visible { outline: 3px solid #f5c96a; outline-offset: 2px; }
+    .note { font-size: 11px; }
+  </style>
+</head>
+<body>
+  <h1>Lens Exact Match Sorter</h1>
+  <p>Sort Google's actual Exact matches results using the Image size controls directly above the result list.</p>
+  <button type="button" data-direction="desc" disabled>Largest first</button>
+  <button type="button" data-direction="asc" disabled>Smallest first</button>
+  <p id="status" role="status">Checking the current tab…</p>
+  <p class="note">Ranks width × height, not thumbnail size. Only loaded matches are included. Google-reported dimensions are not a measurement of the original file or a guarantee of the largest copy online.</p>
+  <p class="note">Version 1.2.0. Disable older Lens sorter copies to avoid conflicts.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+#lems-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 18px;
+  padding: 8px 0;
+  font: 13px/1.5 Arial, sans-serif;
+  color: inherit;
+}
+#lems-toolbar > span:first-child { font-weight: 500; margin-right: 4px; }
+#lems-toolbar button {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid #8888;
+  border-radius: 18px;
+  padding: 6px 13px;
+  cursor: pointer;
+}
+#lems-toolbar button:hover { background: #8882; }
+#lems-toolbar button[aria-pressed="true"] {
+  border-color: currentColor;
+  background: #8ab4f82b;
+  font-weight: 600;
+}
+#lems-toolbar button:focus-visible { outline: 2px solid #4285f4; outline-offset: 3px; }
+#lems-status { font-size: 12px; opacity: .8; margin-left: 6px; }
+@media (max-width: 600px) {
+  #lems-status { flex-basis: 100%; margin-left: 0; }
+}

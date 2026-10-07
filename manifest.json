@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Lens Exact Match Sorter",
+  "version": "1.2.1",
+  "description": "Sort Google Lens Exact matches in place by image size, with Largest first and Smallest first controls above the results.",
+  "permissions": ["activeTab"],
+  "icons": { "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": { "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search*", "https://lens.google.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
